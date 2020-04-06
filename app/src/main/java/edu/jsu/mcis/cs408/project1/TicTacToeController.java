@@ -37,6 +37,15 @@ public class TicTacToeController implements PropertyChangeListener {
 
         //
         // INSERT YOUR CODE HERE
+
+           model.getResult();
+           if (model.getResult() == TicTacToeModel.Result.NONE) {
+               setModelProperty("Mark", square);
+               model.getResult();
+           } else if (model.getResult() != TicTacToeModel.Result.NONE)  {
+               //view.setResult();
+        }
+
         //
 
     }
@@ -91,6 +100,7 @@ public class TicTacToeController implements PropertyChangeListener {
         // requires a change to a Model. Using the property name, it identifies the corresponding
         // setter method, and then invokes this method so that the Model can be updated properly.
         //
+
 
         try {
 

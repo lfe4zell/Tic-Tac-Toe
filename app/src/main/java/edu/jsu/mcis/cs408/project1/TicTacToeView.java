@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.beans.PropertyChangeEvent;
 
 public class TicTacToeView extends AppCompatActivity {
@@ -47,6 +49,17 @@ public class TicTacToeView extends AppCompatActivity {
 
         //
         // INSERT YOUR CODE HERE
+           // getSquareId();
+
+        for (int i = 0 ; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                String squareId = "square_" + i + j;
+                int resourceId = getResources().getIdentifier(squareId, "id", getPackageName());
+                //grid[i][j] = findViewById(resourceId);
+                //grid[i][j].setOnClickListener(this);
+            }
+        }
+
         //
 
     }
@@ -59,6 +72,7 @@ public class TicTacToeView extends AppCompatActivity {
         // the property name/event that was changed, and if it matches a property that is contained
         // in this View, update the View to the new value.  (In this case, the model changes are X
         // or O marks that must be shown in the grid; the property value is the target square.
+
         // Cast this object back to a TicTacToeSquare, then use the "getMarkAsString()" method of
         // the Controller to get the mark.)
         //
@@ -73,6 +87,11 @@ public class TicTacToeView extends AppCompatActivity {
 
                 //
                 // INSERT YOUR CODE HERE
+              // propertyValue
+               // controller.getMarkAsString();
+
+
+
                 //
 
             }
@@ -110,7 +129,7 @@ public class TicTacToeView extends AppCompatActivity {
 
     public void onClick(View v) {
 
-        //
+
         // This is the "onClick()" method shared by all TextViews in the grid.  It should get the
         // name of the clicked TextView, derive the row and column, encapsulate the corresponding
         // square as a TicTacToeSquare object, then hand it off to the Controller for processing.
@@ -119,8 +138,19 @@ public class TicTacToeView extends AppCompatActivity {
         String name = getViewName(v);
         Toast.makeText(getBaseContext(), name, Toast.LENGTH_SHORT).show(); // disable this later
 
-        //
-        // INSERT YOUR CODE HERE
+
+        // YOUR CODE BELOW
+
+        for (int i = 0 ; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                String squareId = "square_" + i + j;
+                int resourceId = getResources().getIdentifier(squareId, "id", getPackageName());
+                //grid[i][j] = findViewById(resourceId);
+                //grid[i][j].setOnClickListener(this);
+            }
+        }
+
+
         //
 
     }
